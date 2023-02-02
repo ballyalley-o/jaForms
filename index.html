@@ -13,12 +13,55 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;600&family=Poppins:ital,wght@0,700;1,900&display=swap');
 
-        .helper-text {
-            font-size: .2rem;
+        body {
+            font-family: sans-serif;
+            font-size: 1.2rem;
+            background-color: #f5f5f5;
         }
+
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .address-wrapper {
+            position: relative;
+            border: 2px solid rgb(31, 29, 29);
+            padding: 2rem;
+            padding-bottom: 8rem;
+            border-radius: 30px;
+
+        }
+
+        .helper-text {
+            font-size: .6rem;
+        }
+
+        .helper-text:hover {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: .6rem;
+            background-color: #f5f5f5;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .button-wrapper {
+            padding-top: 5rem;
+        }
+
+        .h1-wrapper {
+            padding-bottom: 2rem;
+        }
+
+        }
+
         </style>
         <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Compiled and minified JavaScript -->
@@ -27,11 +70,12 @@
     <title>Ja Forms</title>
 </head>
 <body>
-    <div class="container ">
+    <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
-
-                <h1><i class="material-icons prefix">blur_on</i>Ja Form</h1>
+                <div class="h1-wrapper">
+                <h1 class="pb2"><i class="material-icons prefix p-12">blur_on</i>Ja Form</h1>
+                </div>
                 <form action="">
                     <div class="form-group">
                         <div class="input-field col s6">
@@ -143,30 +187,30 @@
                             </span>
                         </div>
                         </span>
-
-                        <div class="address-wrapper border ">
-                        <h4 class="">Billing Address</h4>
-                        <div class="card m12 input-field col s12 row s12">
-
-                            <label for="address">Address</label>
-                            <input
-                                class="validate"
-                                type="text"
-                                id="address"
-                                >
-                            <span
-                                class="helper-text text-danger"
-                                data-error="incorrect"
-                                data-success="right"
-                                >Address
-                            </span>
+                        <div class="container row lg12" >
 
                         </div>
+                        <div class="address-wrapper">
+                            <h4 class="">Billing Address</h4>
+                            <div class="input-field col s12 row s12">
+                                <label for="address">Address</label>
+                                <input
+                                    class="validate"
+                                    type="text"
+                                    id="address"
+                                    >
+                                <span
+                                    class="helper-text text-danger"
+                                    data-error="incorrect"
+                                    data-success="right"
+                                    >Address
+                                </span>
+                            </div>
                         </div>
-                        <div class="center row s12 m2 pull-l2">
+                        <div class="button-wrapper center row s12 m2 pull-l2">
                             <p>
                                 <label>
-                                    <input type="checkbox" class="filled-in" checked="checked" />
+                                    <input type="checkbox" class="filled-out" />
                                     <span>
                                         <a href="https://www.eccreditcontrol.co.nz/business_decisions_made_easy_nz/?utm_source=Google&utm_campaign=Search&gclid=CjwKCAiAuOieBhAIEiwAgjCvcpGU7wRWaNVdU1wAnR-dLVUOA7_clmDHAaShU22oSFwoabBe0gWTghoCDOkQAvD_BwE" >
                                             Agree to Terms & Conditions
@@ -175,8 +219,8 @@
                                 </label>
                             </p>
                         </div>
-                        <div class="center row s12 m2">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <div class=" center row s12 m2">
+                                <button class="btn blue waves-effect waves-light" type="submit" name="action">Submit
                                     <i class="material-icons right">send</i>
                                 </button>
                             </div>
